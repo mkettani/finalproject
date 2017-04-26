@@ -30,5 +30,5 @@
     </form>
     <p><a href="?action=list_technicians">View Technician List</a></p>
 
-
+</div>
 <?php include '../view/footer.php'; ?>
