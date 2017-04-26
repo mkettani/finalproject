@@ -16,3 +16,6 @@
 <label>Version:</label>
         <input type="input" name="version" />
         <br />
+<label>Release Date:</label>
+        <input type="input" name="release_date" />&nbsp;<span>Use 'yyyy-mm-dd' format</span>
+        <br />
