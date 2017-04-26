@@ -10,3 +10,6 @@
         <br />
         
         
+<label>Name:</label>
+        <input type="input" name="name" />
+        <br />
