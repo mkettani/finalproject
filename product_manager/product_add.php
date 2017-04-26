@@ -13,3 +13,6 @@
 <label>Name:</label>
         <input type="input" name="name" />
         <br />
+<label>Version:</label>
+        <input type="input" name="version" />
+        <br />
