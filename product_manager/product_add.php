@@ -5,3 +5,8 @@
         <input type="hidden" name="action" value="add_product" />
 
        
+<label>Code:</label>
+        <input type="input" name="code" />
+        <br />
+        
+        
