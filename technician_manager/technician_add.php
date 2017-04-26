@@ -11,3 +11,14 @@
  <label>First Name:</label>
         <input type="input" name="first_name" />
         <br />
+ <label>Last Name:</label>
+        <input type="input" name="last_name" />
+        <br />
+
+        <label>Email:</label>
+        <input type="input" name="email" />
+        <br />
+
+        <label>Phone:</label>
+        <input type="input" name="phone" />
+        <br />
