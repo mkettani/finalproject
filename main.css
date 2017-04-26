@@ -30,6 +30,7 @@ header ul {
 
 main {
     margin: 0;
+    padding: 16px;
     padding: .5em 2em .25em;
 }
 footer {
