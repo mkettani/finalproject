@@ -4,7 +4,7 @@
         <h2>Register Product</h2>
         <?php if (isset($message)) : ?>
             <p><?php echo $message; ?></p>
-        <?php else: ?>
+        
             <form action="" method="post" id="aligned">
                 <input type="hidden" name="action" value="register_product" />
                 <input type="hidden" name="customer_id" value="<?php echo $customer['customerID']; ?>" />
