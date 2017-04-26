@@ -22,3 +22,15 @@
         <label>Phone:</label>
         <input type="input" name="phone" />
         <br />
+ <label>Password:</label>
+        <input type="input" name="password" />
+        <br />
+
+        <label>&nbsp;</label>
+        <input type="submit" value="Add Technician" />
+        <br />
+    </form>
+    <p><a href="?action=list_technicians">View Technician List</a></p>
+
+</div>
+<?php include '../view/footer.php'; ?>
