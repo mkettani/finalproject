@@ -1,6 +1,7 @@
 <?php
 require('../model/database.php');
 require('../model/customer_db.php');
+
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
 } else if (isset($_GET['action'])) {
@@ -8,6 +9,7 @@ if (isset($_POST['action'])) {
 } else {
     $action = 'search_customers';
 }
+
 if ($action == 'search_customers') {
     include('customer_search.php');
 } else if ($action == 'display_customers') {
@@ -34,9 +36,10 @@ if ($action == 'search_customers') {
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+
     update_customer($customer_id, $first_name, $last_name,
             $address, $city, $state, $postal_code, $country_code,
             $phone, $email, $password);
+
     include('customer_search.php');
 }
-?>
