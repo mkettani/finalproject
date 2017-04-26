@@ -1,6 +1,7 @@
 <?php
 require('../model/database.php');
 require('../model/technician_db.php');
+
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
 } else if (isset($_GET['action'])) {
@@ -8,9 +9,11 @@ if (isset($_POST['action'])) {
 } else {
     $action = 'list_technicians';
 }
+
 if ($action == 'list_technicians') {
     // Get technician data
     $technicians = get_technicians();
+
     // Display the technician list
     include('technician_list.php');
 } else if ($action == 'delete_technician') {
@@ -25,6 +28,7 @@ if ($action == 'list_technicians') {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $password = $_POST['password'];
+
     // Validate the inputs
     if (empty($first_name) || empty($last_name) ||
         empty($email) || empty($phone) || empty($password)) {
@@ -36,8 +40,3 @@ if ($action == 'list_technicians') {
     }
 }
 ?>
-
-
-
-
-
