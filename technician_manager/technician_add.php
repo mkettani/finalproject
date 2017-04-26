@@ -8,3 +8,6 @@
         <input type="input" name="first_name" />
         <br />
       
+ <label>First Name:</label>
+        <input type="input" name="first_name" />
+        <br />
