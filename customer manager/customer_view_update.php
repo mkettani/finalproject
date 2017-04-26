@@ -1,4 +1,3 @@
-
 <?php include '../view/header.php'; ?>
 <div id="main">
 
@@ -11,20 +10,21 @@
             <input type="input" name="last_name" value="<?php echo $last_name; ?>" />
             <input type="submit" value="Search" />
         </form>
- <?php if (isset($message)) : ?>
+
+        <?php if (isset($message)) : ?>
             <p><?php echo $message; ?></p>
         <?php elseif ($customers) : ?>
             <h2>Results</h2>
             <table>
                 <tr>
- <th>Name</th>
+                    <th>Name</th>
                     <th>Email Address</th>
                     <th>City</th>
                     <th>&nbsp;</th>
                 </tr>
                 <?php foreach ($customers as $customer) : ?>
                 <tr>
-<td><?php echo $customer['firstName'] . ' ' . $customer['lastName']; ?></td>
+                    <td><?php echo $customer['firstName'] . ' ' . $customer['lastName']; ?></td>
                     <td><?php echo $customer['email']; ?></td>
                     <td><?php echo $customer['city']; ?></td>
                     <td><form action="." method="post">
@@ -38,5 +38,6 @@
             </table>
         <?php endif; ?>
     </div>
+
 </div>
 <?php include '../view/footer.php'; ?>
