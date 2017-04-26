@@ -40,3 +40,6 @@
             <label>&nbsp;</label>
             <input type="submit" value="Update Customer" />
             <br />
+  </form>
+        <p><a href="">Search Customers</a></p>
+    </div>
