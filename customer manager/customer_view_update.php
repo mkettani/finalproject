@@ -17,3 +17,10 @@
             <h2>Results</h2>
             <table>
                 <tr>
+ <th>Name</th>
+                    <th>Email Address</th>
+                    <th>City</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <?php foreach ($customers as $customer) : ?>
+                <tr>
