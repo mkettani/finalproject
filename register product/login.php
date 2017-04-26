@@ -11,3 +11,5 @@
             <input type="submit" value="Login" />
         </form>
     </div>
+</div>
+<?php include '../view/footer.php'; ?>
