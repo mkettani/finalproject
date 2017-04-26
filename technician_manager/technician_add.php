@@ -7,11 +7,8 @@
         <label>First Name:</label>
         <input type="input" name="first_name" />
         <br />
-      
- <label>First Name:</label>
-        <input type="input" name="first_name" />
-        <br />
- <label>Last Name:</label>
+
+        <label>Last Name:</label>
         <input type="input" name="last_name" />
         <br />
 
@@ -22,7 +19,8 @@
         <label>Phone:</label>
         <input type="input" name="phone" />
         <br />
- <label>Password:</label>
+
+        <label>Password:</label>
         <input type="input" name="password" />
         <br />
 
