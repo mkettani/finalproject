@@ -33,3 +33,5 @@
         </table>
         <p><a href="?action=show_add_form">Add Technician</a></p>
     </div>
+</div>
+<?php include '../view/footer.php'; ?>
