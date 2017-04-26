@@ -11,3 +11,9 @@
             <input type="input" name="last_name" value="<?php echo $last_name; ?>" />
             <input type="submit" value="Search" />
         </form>
+ <?php if (isset($message)) : ?>
+            <p><?php echo $message; ?></p>
+        <?php elseif ($customers) : ?>
+            <h2>Results</h2>
+            <table>
+                <tr>
