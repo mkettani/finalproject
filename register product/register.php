@@ -19,8 +19,7 @@
                         <?php echo $product['name']; ?>
                     </option>
                 <?php endforeach; ?>
-                </select>
-                <br />
+             
 
                 <label>&nbsp;</label>
                 <input type="submit" value="Register Product" />
