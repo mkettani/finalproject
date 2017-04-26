@@ -28,3 +28,10 @@
                     <input type="submit" value="Delete" />
                 </form></td>
             </tr>
+            <?php endforeach; ?>
+        </table>
+        <p><a href="?action=show_add_form">Add Product</a></p>
+        </div>
+
+</div>
+<?php include '../view/footer.php'; ?>
