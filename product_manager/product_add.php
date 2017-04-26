@@ -19,3 +19,11 @@
 <label>Release Date:</label>
         <input type="input" name="release_date" />&nbsp;<span>Use 'yyyy-mm-dd' format</span>
         <br />
+<label>&nbsp;</label>
+        <input type="submit" value="Add Product" />
+        <br />
+    </form>
+    <p><a href="?action=list_products">View Product List</a></p>
+
+</div>
+<?php include '../view/footer.php'; ?>
