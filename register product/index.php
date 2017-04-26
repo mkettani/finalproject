@@ -24,4 +24,4 @@ if ($action == 'login_customer') {
     $message = "Product ($product_code) was registered successfully.";
     include('product_register.php');
 }
-?>
+
