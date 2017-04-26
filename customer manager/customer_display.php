@@ -43,3 +43,5 @@
   </form>
         <p><a href="">Search Customers</a></p>
     </div>
+</div>
+<?php include '../view/footer.php'; ?>
