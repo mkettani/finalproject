@@ -7,7 +7,7 @@
         <!-- display a table of technicians -->
         <table>
             <tr>
-                 <th>First Name</th>
+                <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Phone</th>
@@ -33,5 +33,6 @@
         </table>
         <p><a href="?action=show_add_form">Add Technician</a></p>
     </div>
+
 </div>
 <?php include '../view/footer.php'; ?>
