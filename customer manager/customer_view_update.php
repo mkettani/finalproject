@@ -38,3 +38,5 @@
             </table>
         <?php endif; ?>
     </div>
+</div>
+<?php include '../view/footer.php'; ?>
