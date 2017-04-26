@@ -1,6 +1,7 @@
 <?php include '../view/header.php'; ?>
 <div id="main">
- <h2>Customer Login</h2>
+
+    <h2>Customer Login</h2>
     <p>You must login before you can register a product.</p>
     <div id="content">
         <!-- display a search form -->
@@ -11,5 +12,6 @@
             <input type="submit" value="Login" />
         </form>
     </div>
+
 </div>
 <?php include '../view/footer.php'; ?>
