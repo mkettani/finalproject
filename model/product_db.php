@@ -1,50 +1,55 @@
 <?php
-function get_products() {
+function get_all_products() {
     global $db;
     $query = 'SELECT * FROM products
-              ORDER BY name';
-    $products = $db->query($query);
-    return $products;
+              ORDER BY productCode';
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $products = $statement->fetchAll();
+        return $products;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
 }
-function get_products_by_customer($email) {
+function get_product($code) {
     global $db;
-    $query = "SELECT products.productCode, products.name 
-              FROM products
-                INNER JOIN registrations ON products.productCode = registrations.productCode
-                INNER JOIN customers ON registrations.customerID = customers.customerID
-              WHERE customers.email = '$email'";
-    $products = $db->query($query);
-    return $products;
+    $query = 'SELECT * FROM products
+              WHERE productCode = :code';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(":code", $code);
+        $statement->execute();
+        $product = $statement->fetch();
+        $statement->closeCursor();
+        return $product;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
 }
-function get_product($product_code) {
+function delete_product($code) {
     global $db;
-    $query = "SELECT * FROM products
-              WHERE productCode = '$product_code'";
-    $product = $db->query($query);
-    $product = $product->fetch();
-    return $product;
+    $query = 'DELETE FROM products
+              WHERE productCode = :code';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':code', $code);
+    $statement->execute();
+    $statement->closeCursor();
 }
-function delete_product($product_code) {
+function add_product($code, $name, $version, $date) {
     global $db;
-    $query = "DELETE FROM products
-              WHERE productCode = '$product_code'";
-    $db->exec($query);
-}
-function add_product($code, $name, $version, $release_date) {
-    global $db;
-    $query = "INSERT INTO products
+    $query = 'INSERT INTO products
                  (productCode, name, version, releaseDate)
               VALUES
-                 ('$code', '$name', '$version', '$release_date')";
-    $db->exec($query);
-}
-function update_product($code, $name, $version, $release_date) {
-    global $db;
-    $query = "UPDATE products
-              SET name = '$name',
-                  version = '$version',
-                  releaseDate = '$release_date'
-              WHERE productCode = '$product_code'";
-    $db->exec($query);
+                 (:code, :name, :version, :date)';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':code', $code);
+    $statement->bindValue(':name', $name);
+    $statement->bindValue(':version', $version);
+    $statement->bindValue(':date', $date);
+    $statement->execute();
+    $statement->closeCursor();
 }
 ?>
