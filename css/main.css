@@ -141,3 +141,8 @@ textarea {
 }
 #aligned input[text] {
     width: 15em;
+}
+#aligned .message {
+    margin-left: .5em;
+    width: 15em;
+}
