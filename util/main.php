@@ -18,3 +18,4 @@ function display_error($error_message) {
 }
 
 // Start session
+session_start();
