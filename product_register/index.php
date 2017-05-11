@@ -83,4 +83,9 @@ switch($action) {
         $password  = '';
         header("Location: ". $app_path);
         break;
+        default:
+        display_error("Unknown action: " . $action);
+        break;
+}
+?>
   
