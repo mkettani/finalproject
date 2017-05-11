@@ -10,4 +10,3 @@
         <li><a href="product_register">Customers</a></li>
     </ul>
 </div>
-<?php include ('view/footer.php'); ?>
